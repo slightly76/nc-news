@@ -1,35 +1,35 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ncnLogo from './assets/ncnewslogo.png';
+import Header from './components/header.jsx';
+import { Routes, Route } from 'react-router-dom';
+
+//articles, setArticles, topics, setTopics, users, setUsers, isLoading, setIsLoading, error, setError
 
 function App() {
-  const [count, setCount] = useState(0)
+  function HomePage() {
+    return (
+      <>
+      {/* <MainWindow />
+      <Navbar /> */}
+      {/* <Footer /> */}
+      </>
+    )
+  }
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Header />
+      {/* routes go here */}
+        <HomePage />
+       
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <h1>NC News (coming soon...)</h1>
+    
     </>
   )
 }
 
-export default App
+export default App;
