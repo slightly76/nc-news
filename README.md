@@ -1,12 +1,54 @@
-# React + Vite
+# NC News API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+link [here](https://slightly76-does-nc-news.onrender.com/api)
 
-Currently, two official plugins are available:
+## -= Project Overview =-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The NC News API is a RESTful API built using Node.js, Express.js and PostgreSQL. It serves as a backend for a Northcoders News website which allows users to;
 
-## Expanding the ESLint configuration
+- retrieve articles, topics and comments
+- sort and filter articles
+- post new comments
+- upvote or downvote articles
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is designed for developers to interact with using HTTP requests such as api/articles/:article_id etc.
+
+## -= Setup Instructions =-
+
+Create the following files in the _root_ of your project;
+
+### - Clone the *repo*sitory from GitHub
+
+`git clone https://github.com/slightly76/nc_news` \
+`cd nc-news`
+
+### - Install Dependencies
+
+Ensure you have node.js (>=18.0.0) and PostgreSQL (>=12.0.0) installed, then run `npm install`.
+
+### - Setup Environment Variables
+
+Create the .env.test file
+
+- create .env.test
+- add `PGDATABASE=nc_news_test`
+
+Create .env.development file
+
+- create .env.development
+- add `PGDATABASE=nc_news`
+
+### - Setup and Seed the Database
+
+`npm run setup-dbs` \
+`npm run seed`
+
+### - Run the API locally
+
+Start the development server with `npm run dev`.
+
+The API will be available at; http://localhost:9090/api
+
+### - Running the Tests
+
+Run the test suite with `npm test`
