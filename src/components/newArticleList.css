@@ -1,0 +1,58 @@
+body {  
+    font-family: "Jersey 15", sans-serif;   
+    background: #00323b; 
+    margin: 0;
+    padding: 0;
+}
+
+.articleListContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    background: #2f5056;
+    border-radius: 10px;
+    margin-top: 115px
+}
+
+.articleHeader {
+    z-index: 1001;
+    font-family: "Press Start 2p", cursive;
+    font-size: 14px;
+    color: #de9a89;
+}
+
+.articleListCard {
+    background: #dadada;
+    border: 2px solid #2f5056;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-height: 30px;
+    justify-content: center;
+    box-shadow: 0 0 15px 15px rgba(47, 80,86, 0.8);
+ }
+
+.articleTitle {
+    font-family: "Press Start 2p", cursive;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2f5056;
+    background: #dadada;
+    margin-bottom: 3px;
+}
+
+.articleAuthor {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.articleTimeStamp {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}

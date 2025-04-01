@@ -1,15 +1,18 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
-import ncnLogo from './assets/ncnewslogo.png';
-import Header from './components/header.jsx';
+import Header from './components/Header.jsx';
 import NewArticleList from './components/NewArticleList.jsx' ;
 // import HotArticleList from './components/HotArticleList.jsx' ;
-import { Routes, Route } from 'react-router-dom';
+import { PageTitleProvider } from './components/PageTitleContext.jsx';
+
+
 
 //articles, setArticles, topics, setTopics, users, setUsers, isLoading, setIsLoading, error, setError
 
 function App() {
   function HomePage() {
+    const [pageTitle, setPageTitle] = useState('Dummy Page');
     return (
       <>
       <NewArticleList />
@@ -26,12 +29,13 @@ function App() {
   return (
     <>
       <div>
+        <PageTitleProvider>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
 
         </Routes>
-        
+        </PageTitleProvider>
     
         
        

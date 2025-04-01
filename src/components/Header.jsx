@@ -2,11 +2,11 @@ import React from 'react';
 import ncnLogo from '../assets/ncnewslogo.png';
 import userAvatar from '../assets/icons/icon-avatar.svg';
 import './header.css';
-
-const activePage = 'dummy page';
+import { usePageTitle } from './PageTitleContext.jsx';
+import { useState } from 'react';
 
 function Header() {
-	
+	const { pageTitle } = usePageTitle();
 	return (
 	<header className="header">
 		<div className="top-container">
@@ -21,7 +21,7 @@ function Header() {
 		
 
 		<div className="bottom-container">
-			<p className="activePage">{activePage}</p>
+			<p className="activePage">{pageTitle}</p>
 			<img src={userAvatar} className="user" alt="user avatar" />
 		</div>
 	

@@ -26,22 +26,25 @@
 }
 
 .logo {
-  height: 5em;
+  height: 3em;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
+  
 }
 
 .headline {
   font-family: "Press Start 2p", cursive;
-  font-size:30px;
+  font-size:25px;
   font-weight: bold;
   color: white;
   background: #00323b;
   letter-spacing: 2px;
   white-space: nowrap;
+  margin-top: 0;
+  
   
 }
 
@@ -60,11 +63,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 0px;
   background: #00323b;
-  padding: 0px 15px;
+  padding: 0px 10px;
   bottom: 5px;
-  left: 0;
+  /* left: 0; */
   
 }
   

@@ -2,17 +2,21 @@ import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import getDaysPassed from './getDaysPassed';
+import { usePageTitle } from './PageTitleContext';
+import './newArticleList.css';
 
-function NewArticleList() {
-console.log('NEWarticlelist');
+function NewArticleList({} ) {
+
     const [newArticles, setNewArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    // let activepage = "home";
+    const { setPageTitle } = usePageTitle();
+
 useEffect (() => {
     setIsLoading(true);
+    setPageTitle('Recent Articles');
 
     Promise.all([
-        axios.get('https://slightly76-does-nc-news.onrender.com/api/articles')
+        axios.get('https://slightly76-does-nc-news.onrender.com/api/article?sort_by=created_at')
     ])
     .then(([articlesResult]) => {
         
@@ -23,14 +27,14 @@ useEffect (() => {
         console.error('Error fetching data:', error);
         setIsLoading(false)
     });
-}, []);
+}, [setPageTitle]);
 
-if (isLoading) return <p>Please wait, loading...</p>;
+if (isLoading) return <p className="message">Please wait, loading...</p>;
 
 return (
     <>
-    <p className="ArticleTitle">-=Articles=-</p>
-    <div className="articleslist">
+   
+    <div className="articleListContainer">
         
 
         {newArticles.map((article) => {
@@ -38,8 +42,10 @@ return (
            return (
                 <div className="articleListCard" key={article.article_id}>
                  <p className="articleTitle">{article.title}</p>
-                 <p className="articleAuthor">by {article.author}</p>
-                 <p className="articleCreated">{time}</p>
+                 <p className="articleAuthor">in {article.topic} by {article.author}</p>
+                 {/* <img src={article.author.avatar_url} className="userAvatar" alt="user avatar"></img> */}
+                 
+                 <p className="articleTimeStamp">{time}</p>
                  <br></br>
 
                 </div>
