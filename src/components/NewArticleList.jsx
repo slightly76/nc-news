@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import getDaysPassed from './getDaysPassed';
 import { usePageTitle } from './PageTitleContext';
 import './newArticleList.css';
@@ -16,11 +17,11 @@ useEffect (() => {
     setPageTitle('Recent Articles');
 
     Promise.all([
-        axios.get('https://slightly76-does-nc-news.onrender.com/api/article?sort_by=created_at')
+        axios.get('https://slightly76-does-nc-news.onrender.com/api/articles?sort_by=created_at')
     ])
-    .then(([articlesResult]) => {
+    .then(([response]) => {
         
-        setNewArticles(articlesResult.data.articles);
+        setNewArticles(response.data.articles);
         setIsLoading(false);
     })
     .catch((error) => {
@@ -41,7 +42,10 @@ return (
            const time = getDaysPassed(article.created_at);
            return (
                 <div className="articleListCard" key={article.article_id}>
-                 <p className="articleTitle">{article.title}</p>
+                    <Link to={`/articles/${article.article_id}`} className="articleListTitle">
+                    {article.title}
+                    </Link>
+                 {/* <p className="articleTitle">{article.title}</p> */}
                  <p className="articleAuthor">in {article.topic} by {article.author}</p>
                  {/* <img src={article.author.avatar_url} className="userAvatar" alt="user avatar"></img> */}
                  

@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Header from './components/Header.jsx';
-import NewArticleList from './components/NewArticleList.jsx' ;
+import NewArticleList from './components/NewArticleList.jsx';
+import ReadArticle from './components/ReadArticle.jsx';
 // import HotArticleList from './components/HotArticleList.jsx' ;
 import { PageTitleProvider } from './components/PageTitleContext.jsx';
 
@@ -33,6 +34,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/articles/:article_id" element={<ReadArticle />} />
 
         </Routes>
         </PageTitleProvider>
