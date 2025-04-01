@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import ncnLogo from './assets/ncnewslogo.png';
 import Header from './components/header.jsx';
+import NewArticleList from './components/NewArticleList.jsx' ;
+import HotArticleList from './components/HotArticleList.jsx' ;
 import { Routes, Route } from 'react-router-dom';
 
 //articles, setArticles, topics, setTopics, users, setUsers, isLoading, setIsLoading, error, setError
@@ -10,6 +12,10 @@ function App() {
   function HomePage() {
     return (
       <>
+      <NewArticleList />
+      <HotArticleList />
+
+
       {/* <MainWindow />
       <Navbar /> */}
       {/* <Footer /> */}
@@ -21,12 +27,17 @@ function App() {
     <>
       <div>
         <Header />
-      {/* routes go here */}
-        <HomePage />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+
+        </Routes>
+        
+    
+        
        
       </div>
       
-      <h1>NC News (coming soon...)</h1>
+      
     
     </>
   )
