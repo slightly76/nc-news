@@ -3,7 +3,7 @@ import './App.css'
 import ncnLogo from './assets/ncnewslogo.png';
 import Header from './components/header.jsx';
 import NewArticleList from './components/NewArticleList.jsx' ;
-import HotArticleList from './components/HotArticleList.jsx' ;
+// import HotArticleList from './components/HotArticleList.jsx' ;
 import { Routes, Route } from 'react-router-dom';
 
 //articles, setArticles, topics, setTopics, users, setUsers, isLoading, setIsLoading, error, setError
@@ -13,7 +13,7 @@ function App() {
     return (
       <>
       <NewArticleList />
-      <HotArticleList />
+      {/* <HotArticleList /> */}
 
 
       {/* <MainWindow />
