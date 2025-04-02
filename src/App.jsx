@@ -10,9 +10,7 @@ import { PageTitleProvider } from './components/PageTitleContext.jsx';
 
 
 //articles, setArticles, topics, setTopics, users, setUsers, isLoading, setIsLoading, error, setError
-
-function App() {
-  function HomePage() {
+ function HomePage() {
     const [pageTitle, setPageTitle] = useState('Dummy Page');
     return (
       <>
@@ -26,25 +24,22 @@ function App() {
       </>
     )
   }
+function App() {
+ 
 
   return (
     <>
-      <div>
-        <PageTitleProvider>
+      <PageTitleProvider>
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/articles/:article_id" element={<ReadArticle />} />
-
-        </Routes>
-        </PageTitleProvider>
-    
+          <div className="pageContainer">
         
-       
-      </div>
-      
-      
-    
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/articles/:article_id" element={<ReadArticle />} />
+          </Routes>
+          </div>
+      </PageTitleProvider>
+
     </>
   )
 }

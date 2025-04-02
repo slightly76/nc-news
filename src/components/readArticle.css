@@ -8,20 +8,16 @@ body {
 
 .articleReadPage {
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
+    padding: 5px;
     gap: 5px;
+    margin-top: 120px;
+    border-radius: 10px;
+    width: 97%;
+    flex-grow: 1;
     background: #dadada;
-    border-radius: 10px;
-    border: 2px solid #2f5056;
-    border-radius: 10px;
-    padding-top: 0px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 2px 0;
-    min-height: 30px;
-    justify-content: center;
-    margin-top: -320px;
 }
 
 .articleReadTitle {
@@ -29,26 +25,41 @@ body {
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     color: #de9a89;
-    width: 100%;
+    border-top: solid #2f5056 2px;
+    border-bottom: solid #2f5056 2px;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+    width: 98%;
     text-shadow: 1px 1px 2px #2f5056;
+    box-shadow: 1px 1px 2px #2f5056;
 }
 
 .articleReadAuthor {
-    font-size: 14px;
+    font-size: 16px;
     color: #2f5056;
     margin: 0;
+    padding-left: 5px;
 }
 
 .articleReadTimeStamp {
-    font-size: 12px;
+    font-size: 14px;
     color: #2f5056;
     margin: 0;
+    padding-left: 5px;
 }
 
 .articleReadBody {
     border-top: solid #2f5056 2px;
+    border-bottom: solid #2f5056 2px;
+    box-shadow: 1px 1px 2px #2f5056;
+    padding: 5px;
     font-family: "Jersey 15", sans-serif;
     font-size: 18px;
     color: #2f5056;
+    background: white;
     padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    
 }
