@@ -4,6 +4,7 @@ import './commentsList.css';
 import getDaysPassed from './getDaysPassed';
 
 function CommentsList({ article_id }) {
+	const [article, setArticle] = useState({});
 	const [comments, setComments] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -35,8 +36,10 @@ function CommentsList({ article_id }) {
 					return (
 						<div key={comment.comment_id} className='commentCard'>
 							<p className='commentTimeStamp'>{time}</p>
-							<p className='commentAuthor'>{comment.author} said:</p>
+							<p className='commentAuthor'>{comment.author} commented:</p>
 							<p className='commentBody'>{comment.body}</p>
+
+							<br></br>
 						</div>
 					);
 				})
