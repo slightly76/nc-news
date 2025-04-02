@@ -31,6 +31,7 @@ body {
     background: white;
     padding: 5px;
     width: 98%;
+    min-height: 50px;
     text-shadow: 1px 1px 2px #2f5056;
     box-shadow: 1px 1px 2px #2f5056;
 }
@@ -39,15 +40,17 @@ body {
     font-size: 16px;
     color: #2f5056;
     margin: 0;
-    padding-left: 5px;
+    padding-left: 40px;
 }
 
 .articleReadTimeStamp {
     font-size: 14px;
     color: #2f5056;
     margin: 0;
-    padding-left: 5px;
+    padding-left: 40px;
 }
+
+
 
 .articleReadBody {
     border-top: solid #2f5056 2px;
@@ -62,4 +65,43 @@ body {
     padding-bottom: 20px;
     border-radius: 10px;
     
+}
+
+.voteContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    
+    
+}
+
+.articleVotes {
+    font-size: 18px;
+    display: flex;
+    color: #2f5056;
+    text-shadow: 1px 1px 1px #de9a89;
+    /* padding-right: 40px; */
+    /* padding-bottom: 20px; */
+    /* margin-left:200px; */
+    margin-left: 5px;
+    text-align: left;
+    padding-top: 10px;
+    
+}
+
+
+.voteButton {
+    font-size: 12px;
+    background-color: #2f5056;
+    color: #de9a89;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #de9a89;
+}
+
+.voteButton:hover {
+    background-color: #de9a89;
+    color: #2f5056;
 }

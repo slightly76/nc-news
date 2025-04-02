@@ -35,27 +35,38 @@ function NewArticleList({}) {
 	return (
 		<>
 			<div className='articleListContainer'>
-				{newArticles.map((article) => {
-					const time = getDaysPassed(article.created_at);
-					return (
-						<div className='articleListCard' key={article.article_id}>
-							<Link
-								to={`/articles/${article.article_id}`}
-								className='articleListTitle'
-							>
-								{article.title}
-							</Link>
-							{/* <p className='articleListTitle'>{article.title}</p> */}
-							<p className='articleAuthor'>
-								in {article.topic} by {article.author}
-							</p>
-							{/* <img src={article.author.avatar_url} className="userAvatar" alt="user avatar"></img> */}
+				<div className='articleListCard'>
+					<div className='artcleHeader'>
+						{newArticles.map((article) => {
+							const time = getDaysPassed(article.created_at);
+							return (
+								<div className='articleListCard' key={article.article_id}>
+									<Link
+										to={`/articles/${article.article_id}`}
+										className='articleListTitle'
+									>
+										{article.title}
+									</Link>
+									{/* <p className='articleListTitle'>{article.title}</p> */}
+									<p className='articleAuthor'>
+										in {article.topic} by {article.author}
+									</p>
 
-							<p className='articleTimeStamp'>{time}</p>
-							<br></br>
-						</div>
-					);
-				})}
+									{/* <img src={article.author.avatar_url} className="userAvatar" alt="user avatar"></img> */}
+
+									<p className='articleTimeStamp'>{time}</p>
+									<p className='articleVotes'>
+										votes {article.votes}
+										<br></br>
+										{/* <button className='voteButton'>↑vote</button>
+										<button className='voteButton'>↓vote</button> */}
+									</p>
+									<br></br>
+								</div>
+							);
+						})}
+					</div>
+				</div>
 			</div>
 		</>
 	);

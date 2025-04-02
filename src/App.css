@@ -25,5 +25,9 @@
   color: #de9a89;
   font-size: 24px;
   font-weight: bold;
-  z-index: 999; /* Ensures it's above everything */
+  z-index: 999;
+  border-top: solid #2f5056 2px;
+  border-bottom: solid #2f5056 2px;
+  text-shadow: 1px 1px 2px #2f5056;
+  box-shadow: 1px 1px 2px #2f5056;
 }
