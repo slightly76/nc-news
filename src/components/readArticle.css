@@ -20,8 +20,8 @@ body {
     padding-right: 10px;
     margin: 2px 0;
     min-height: 30px;
-    justify-content: center;
-    margin-top: -320px;
+   justify-content: top;
+    margin-top: -140px;
 }
 
 .articleReadTitle {
