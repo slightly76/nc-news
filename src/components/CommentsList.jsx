@@ -3,6 +3,7 @@ import axios from 'axios';
 import './commentsList.css';
 import getDaysPassed from './getDaysPassed';
 import CommentSubmission from './CommentSubmission';
+import DeleteComment from './DeleteComment';
 
 function CommentsList({ article_id }) {
 	const [article, setArticle] = useState({});
@@ -27,6 +28,13 @@ function CommentsList({ article_id }) {
 	const addComment = (newComment) => {
 		setComments((prevComments) => [newComment, ...prevComments]);
 	};
+
+	const removeComment = (comment_id) => {
+		setComments((prevComments) =>
+			prevComments.filter((comment) => comment.comment_id !== comment_id)
+		);
+	};
+
 	if (isLoading) return <p className='message'>Loading comments...</p>;
 
 	return (
@@ -38,12 +46,19 @@ function CommentsList({ article_id }) {
 			) : (
 				comments.map((comment) => {
 					const time = getDaysPassed(comment.created_at);
+
 					return (
 						<div key={comment.comment_id} className='commentCard'>
 							<p className='commentTimeStamp'>{time}</p>
 							<p className='commentAuthor'>{comment.author} commented:</p>
 							<p className='commentBody'>{comment.body}</p>
-
+							{comment.author === 'jessjelly' && (
+								<DeleteComment
+									article_id={article_id}
+									comment_id={comment.comment_id}
+									removeComment={removeComment}
+								/>
+							)}
 							<br></br>
 						</div>
 					);

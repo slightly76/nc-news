@@ -14,7 +14,9 @@ const getDaysPassed = (dateString) => {
 	if (daysPassed < 0) daysPassed = 0;
 	if (hoursPassed < 0) hoursPassed = 0;
 	if (minutesPassed < 1) minutesPassed = 1;
-	return `${daysPassed} days, ${hoursPassed} hours and ${minutesPassed} minutes ago`;
+	let timeString = `${daysPassed} days, ${hoursPassed} hours and ${minutesPassed} minutes ago`;
+	if (daysPassed > 364) timeString = 'over a year ago';
+	return timeString;
 };
 
 export default getDaysPassed;
