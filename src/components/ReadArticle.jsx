@@ -80,11 +80,7 @@ function readArticle() {
 					</button>
 				</div>
 			</div>
-			{/* <div className='leaveCommentContainer'>
-				Leave a comment
-				
-			</div> */}
-			<CommentSubmission article_id={article_id} />
+
 			<CommentsList article_id={article_id} />
 		</div>
 	);
