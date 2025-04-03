@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { usePageTitle } from './PageTitleContext';
 import CommentsList from './CommentsList';
 import getDaysPassed from './getDaysPassed';
+import CommentSubmission from './CommentSubmission';
 import axios from 'axios';
 import './readArticle.css';
 
@@ -68,7 +69,7 @@ function readArticle() {
 			<p className='articleReadBody'>{article.body}</p>
 
 			<div className='voteContainer'>
-				<p className='articleVotes'>
+				<div className='articleVotes'>
 					{article.votes} votes for this article so far...
 					<br></br>
 					<button className='voteButton' onClick={handleUpvote}>
@@ -77,8 +78,13 @@ function readArticle() {
 					<button className='voteButton' onClick={handleDownvote}>
 						↓vote
 					</button>
-				</p>
+				</div>
 			</div>
+			{/* <div className='leaveCommentContainer'>
+				Leave a comment
+				
+			</div> */}
+			<CommentSubmission article_id={article_id} />
 			<CommentsList article_id={article_id} />
 		</div>
 	);

@@ -47,21 +47,13 @@ function NewArticleList({}) {
 									>
 										{article.title}
 									</Link>
-									{/* <p className='articleListTitle'>{article.title}</p> */}
+
 									<p className='articleAuthor'>
 										in {article.topic} by {article.author}
 									</p>
 
-									{/* <img src={article.author.avatar_url} className="userAvatar" alt="user avatar"></img> */}
-
 									<p className='articleTimeStamp'>{time}</p>
-									<p className='articleVotes'>
-										votes {article.votes}
-										<br></br>
-										{/* <button className='voteButton'>↑vote</button>
-										<button className='voteButton'>↓vote</button> */}
-									</p>
-									<br></br>
+									<p className='articleListVotes'>votes {article.votes}</p>
 								</div>
 							);
 						})}
