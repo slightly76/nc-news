@@ -1,22 +1,22 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+html {
+	overflow-y: scroll;
+}
+
+
 
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;
-  font-weight: 400;
+  font-weight: 40;
   font-style: normal;
 }
 
 .message {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
-  width: 100vw; 
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
