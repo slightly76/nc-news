@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './commentSubmission.css';
 
 function CommentSubmission({ article_id }) {
 	const [comment, setComment] = useState('');
@@ -8,16 +9,17 @@ function CommentSubmission({ article_id }) {
 
 	const handleComment = async (submit) => {
 		submit.preventDefault();
-		console.log(submit);
 		if (!comment.trim()) return;
 		setIsSubmitting(true);
 		setError(null);
-		const user = 'DUMMYUSER';
-
+		const user = 'jessjelly';
+		const stuff = { body: comment, username: user };
+		console.log('comment is', stuff);
 		try {
+			console.log('this is article', article_id);
 			const response = await axios.post(
-				`https://slightly76-does-nc-news.onrender.com/api/articles/${article_id}/comments`,
-				{ comment, user }
+				`https://slightly76-does-nc-news.onrender.com/api/articles/${article_id}/comments/`,
+				{ body: comment, author: user }
 			);
 			console.log('comment submitted', response.data);
 			setComment('');
@@ -29,11 +31,13 @@ function CommentSubmission({ article_id }) {
 		}
 	};
 
+	// setComment((prevComments) => [response.data.comment, ...prevComments]);
+
 	return (
 		<form onSubmit={handleComment} className='commentForm'>
 			<textarea
 				value={comment}
-				onChange={(submit) => setComment(submit.target.value)}
+				onChange={(e) => setComment(e.target.value)}
 				placeholder='Enter your comment here...'
 				className='commentBox'
 				rows={4}

@@ -18,6 +18,7 @@ body {
     width: 97%;
     flex-grow: 1;
     background: #dadada;
+    /* position: relative; */
 }
 
 .articleReadTitle {
@@ -64,20 +65,36 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
+    margin-left: 5px;
     
 }
 
 .voteContainer {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    padding-left: 20px;
+    width: fit-content;
+    margin-top: -20px;
+    right: 0;
+
+    
     
     
 }
 
 .articleVotes {
-    font-size: 18px;
     display: flex;
+    align-items: right;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    flex-grow: 1;
+    background: #dadada;
+    font-size: 18px;
+    /* display: flex; */
     color: #2f5056;
     text-shadow: 1px 1px 1px #de9a89;
     /* padding-right: 40px; */
@@ -107,6 +124,4 @@ body {
     color: #2f5056;
 }
 
-.leaveCommentContainer{
 
-}

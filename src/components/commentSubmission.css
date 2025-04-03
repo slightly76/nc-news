@@ -1,0 +1,36 @@
+.commentForm {
+    display: flex;
+    align-items: right;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+    width: 97%;
+    flex-grow: 1;
+    background: #dadada;
+}
+
+.commentBox {
+    font-family: "Jersey 15", sans-serif;  
+    border-top: solid #2f5056 2px;
+    border-bottom: solid #2f5056 2px;
+    background-color: #e7e7e7;
+    color: #4e4e4e;
+}
+
+.commentSubmitButton {
+    font-size: 14px;
+    background-color: #2f5056;
+    color: #de9a89;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #de9a89;
+}
+
+.commentSubmitButton:hover {
+    background-color: #de9a89;
+    color: #2f5056;
+}
