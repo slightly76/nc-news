@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './commentsList.css';
 import getDaysPassed from './getDaysPassed';
+import CommentSubmission from './CommentSubmission';
 
 function CommentsList({ article_id }) {
 	const [article, setArticle] = useState({});
@@ -23,10 +24,14 @@ function CommentsList({ article_id }) {
 			});
 	}, [article_id]);
 
+	const addComment = (newComment) => {
+		setComments((prevComments) => [newComment, ...prevComments]);
+	};
 	if (isLoading) return <p className='message'>Loading comments...</p>;
 
 	return (
 		<div className='commentsSection'>
+			<CommentSubmission article_id={article_id} addComment={addComment} />
 			<h3 className='commentTitle'>Comments</h3>
 			{comments.length === 0 ? (
 				<p>Be the first to comment!</p>
