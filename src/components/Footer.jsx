@@ -8,13 +8,8 @@ function Footer() {
 				<Link to='/' className='footer-link'>
 					Articles
 				</Link>
-				|
 				<Link to='/topics' className='footer-link'>
 					Topics
-				</Link>
-				|
-				<Link to='/users' className='footer-link'>
-					Users
 				</Link>
 			</nav>
 			<p className='footerSlug'>Copyright 2025 Chris Askew</p>

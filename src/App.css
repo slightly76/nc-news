@@ -1,8 +1,24 @@
-html {
+html, body {
 	overflow-y: scroll;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Jersey 15", sans-serif;
+  background: #00323b;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.pageContainer {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 80px;
+  background: #00323b;
+}
 
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;

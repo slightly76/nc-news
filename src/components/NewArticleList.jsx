@@ -12,41 +12,38 @@ function NewArticleList({}) {
 	const [newArticles, setNewArticles] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const { setPageTitle } = usePageTitle();
+	const [sortBy, setSortBy] = useState('created_at');
+	const [order, setOrder] = useState('desc');
 
 	useEffect(() => {
 		setIsLoading(true);
-		if (topic_slug) {
-			setPageTitle(`Articles on Topic: ${topic_slug}`);
 
-			axios
-				.get(
-					`https://slightly76-does-nc-news.onrender.com/api/articles?topic=${topic_slug}&sort_by=created_at`
-				)
+		const url = topic_slug
+			? `https://slightly76-does-nc-news.onrender.com/api/articles?topic=${topic_slug}&sort_by=created_at&order=${order}`
+			: `https://slightly76-does-nc-news.onrender.com/api/articles?sort_by=created_at&order=${order}`;
 
-				.then((articlesResult) => {
-					setNewArticles(articlesResult.data.articles);
-					setIsLoading(false);
-				})
-				.catch((error) => {
-					console.error('Error fetching data:', error);
-					setIsLoading(false);
-				});
-		} else {
-			setPageTitle('New Articles');
-			axios
-				.get(
-					'https://slightly76-does-nc-news.onrender.com/api/articles?sort_by=created_at'
-				)
-				.then((articlesResult) => {
-					setNewArticles(articlesResult.data.articles);
-					setIsLoading(false);
-				})
-				.catch((error) => {
-					console.error('Error fetching data:', error);
-					setIsLoading(false);
-				});
-		}
-	}, [setPageTitle, topic_slug]);
+		setPageTitle(topic_slug ? `Article Topic: ${topic_slug}` : 'New Articles');
+
+		axios
+			.get(url)
+
+			.then((articlesResult) => {
+				let articles = articlesResult.data.articles;
+
+				if (sortBy === 'comment_count') {
+					articles.sort((a, b) => {
+						const compareCount = a.comment_count - b.comment_count;
+						return order === 'asc' ? compareCount : -compareCount;
+					});
+				}
+				setNewArticles(articles);
+				setIsLoading(false);
+			})
+			.catch((error) => {
+				console.error('Error fetching data:', error);
+				setIsLoading(false);
+			});
+	}, [setPageTitle, topic_slug, sortBy, order]);
 
 	if (isLoading) return <p className='message'>Please wait, loading...</p>;
 
@@ -57,6 +54,24 @@ function NewArticleList({}) {
 	return (
 		<>
 			<div className='articleListContainer'>
+				<div className='articleSortControls'>
+					<label>
+						Sort by:{' '}
+						<select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+							<option value='created_at'>Date</option>
+							<option value='votes'>Votes</option>
+							<option value='comment_count'>Comments</option>
+						</select>
+					</label>
+					<label>
+						Order:{' '}
+						<select value={order} onChange={(e) => setOrder(e.target.value)}>
+							<option value='desc'>↓</option>
+							<option value='asc'>↑</option>
+						</select>
+					</label>
+				</div>
+
 				{/* <div className='articleListCard'> */}
 				<div className='articleHeader'>
 					{newArticles.map((article) => {
@@ -75,7 +90,7 @@ function NewArticleList({}) {
 								</p>
 
 								<p className='articleTimeStamp'>{time}</p>
-								<p className='articleListVotes'>votes {article.votes}</p>
+								<p className='articleListVotes'>Votes {article.votes}</p>
 							</div>
 						);
 					})}
