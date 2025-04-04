@@ -10,9 +10,8 @@ function Header() {
 	return (
 		<header className='header'>
 			<div className='top-container'>
-				<a href='' target='_blank'>
-					<img src={ncnLogo} className='logo' alt='NC News logo' />
-				</a>
+				<img src={ncnLogo} className='logo' alt='NC News logo' />
+
 				<div className='text-container'>
 					<p className='headline'>NC News</p>
 					<p className='tagline'>push someone's buttons today!</p>
