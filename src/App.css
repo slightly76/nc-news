@@ -1,20 +1,40 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+html {
+	overflow-y: scroll;
+}
+
+
 
 .jersey-15-regular {
   font-family: "Jersey 15", sans-serif;
-  font-weight: 400;
+  font-weight: 40;
   font-style: normal;
 }
 
 .message {
+  /* display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(175, 175, 175, 0.8); 
+  text-shadow: 1px 1px 2px #2f5056;
+  color: #de9a89;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 999;
+  border-top: solid #2f5056 2px;
+  border-bottom: solid #2f5056 2px;
+  text-shadow: 1px 1px 2px #2f5056;
+  box-shadow: 1px 1px 2px #2f5056; */
+
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
   width: 100vw; 
   position: fixed;

@@ -1,4 +1,5 @@
 .commentsSection {
+    font-family: "Jersey 15", sans-serif;  
     background: #dadada;
     border-radius: 10px;
     border: 2px solid #2f5056;
@@ -19,7 +20,7 @@
 }
 
 .commentTitle {
-    /* z-index: 1001; */
+  
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     color: #de9a89;

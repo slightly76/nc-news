@@ -70,7 +70,7 @@ function readArticle() {
 
 			<div className='voteContainer'>
 				<div className='articleVotes'>
-					{article.votes} votes for this article so far...
+					{article.votes} Votes
 					<br></br>
 					<button className='voteButton' onClick={handleUpvote}>
 						↑vote

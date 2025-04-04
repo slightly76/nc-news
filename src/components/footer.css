@@ -1,0 +1,34 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+    z-index: 1001;
+	background: #00323b;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.footer-nav {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.footer-link {
+	font-family: "Press Start 2p", cursive;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
+
+.footerSlug {
+    font-size: 8px;
+}

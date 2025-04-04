@@ -15,13 +15,14 @@ body {
     border-radius: 10px;
     margin-top: 115px;
     width: 97%;
+    overflow: hidden;
 }
 
 .articleHeader {
     /* z-index: 1001; */
-    display: flex; 
+    /* display: flex; 
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     color: #de9a89;
@@ -44,8 +45,9 @@ body {
     justify-content: space-between;
     gap: 3px;
     min-height: 30px;
-    justify-content: center;
     box-shadow: 0 0 15px 15px rgba(47, 80, 86, 0.8);
+    font-family: "Jersey 15", sans-serif; 
+    width: 100%;
    
 }
 
@@ -63,18 +65,21 @@ body {
 
 
 .articleAuthor {
-    font-size: 14px;
+    font-family: "Jersey 15", sans-serif;   
+    font-size: 16px;
     color: #555;
     margin: 0;
 }
 
 .articleTimeStamp {
-    font-size: 12px;
+    font-family: "Jersey 15", sans-serif;   
+    font-size: 14px;
     color: #777;
     margin: 0;
 }
 
 .articleListVotes {
+    font-family: "Jersey 15", sans-serif;   
     font-size: 18px;
     display: flex;
     color: #2f5056;
