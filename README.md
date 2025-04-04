@@ -1,54 +1,52 @@
-# NC News API
+# Slightly76 Does NC News (by [Chris Askew](mailto:caskew@hotmail.com) )
 
-link [here](https://slightly76-does-nc-news.onrender.com/api)
+    Welcome to Slightly76 Does NC News, a single-page application built in JavaScvript with React, CSS andpSQL that mimics a large, popular social media site. It is designed, with Mobile in mind, to provide users with an intuitive experience for browsing articles and interacting with them in various ways. It's hosted on Supabase, Render and Netlify and is my first 'live' coding project of the modern age.
 
-## -= Project Overview =-
+---
 
-The NC News API is a RESTful API built using Node.js, Express.js and PostgreSQL. It serves as a backend for a Northcoders News website which allows users to;
+## 🎯 Deployed App
 
-- retrieve articles, topics and comments
-- sort and filter articles
-- post new comments
-- upvote or downvote articles
+You can check out the live version of the app by visiting the deployed site here; [slightly76-does-nc-news](https://slightly76-does-nc-news.netlify.app/)
 
-This project is designed for developers to interact with using HTTP requests such as api/articles/:article_id etc.
+---
 
-## -= Setup Instructions =-
+## 📚 Features
 
-Create the following files in the _root_ of your project;
+- **Browse Articles**: View articles sorted by various criteria (e.g., date, votes, comment count).
+- **Read Articles**: Click on any article to read it and its comments.
+- **Filter Articles**: View articles by topic.
+- **Post Comments**: Share your thoughts by posting comments on articles.
+- **Vote on Articles**: Upvote or downvote articles based on your preferences.
+- **SQL Injection Protection**: the backend features SQL injection protection against nefarioussness.
 
-### - Clone the *repo*sitory from GitHub
+---
 
-`git clone https://github.com/slightly76/nc_news` \
-`cd nc-news`
+## 🔧 How to Use the App
 
-### - Install Dependencies
+1. **Visit the App**: Navigate to the deployed [app](https://slightly76-does-nc-news.netlify.app/).
+2. **Sort Articles**: Use the sorting options to organize articles based on your preferred criteria (e.g., votes, date created, comments).
+3. **Filter Articles**: Choose Topics from the app's nav bar in the footer to see a list of filterable topics.
+4. **Read Articles**: Click on any article title to view the full article along with comments.
+5. **Vote**: Upvote or downvote articles to as desired.
+6. **Comment**: Post your comments on articles (as a dummy user).
 
-Ensure you have node.js (>=18.0.0) and PostgreSQL (>=12.0.0) installed, then run `npm install`.
+---
 
-### - Setup Environment Variables
+## :floppy_disk: Sources
 
-Create the .env.test file
+- The Front-End repo can be found on GitHub [here](https://github.com/slightly76/nc-news)
+- The Back-End API used to serve the data for the application can be found [here](https://slightly76-does-nc-news.onrender.com/api)
+- The repo for the Back-End project can be found [here](https://github.com/slightly76/nc_news_backend)
+- [Supabase](https://supabase.com/), [Render](https://render.com/) and [Netlify](https://www.netlify.com/) were all used to host this application.
 
-- create .env.test
-- add `PGDATABASE=nc_news_test`
+---
 
-Create .env.development file
+### :clipboard: Prerequisites
 
-- create .env.development
-- add `PGDATABASE=nc_news`
+You must have **Node.js v14** installed at least to run this app _locally_.
 
-### - Setup and Seed the Database
+---
 
-`npm run setup-dbs` \
-`npm run seed`
+### :email: Contact
 
-### - Run the API locally
-
-Start the development server with `npm run dev`.
-
-The API will be available at; http://localhost:9090/api
-
-### - Running the Tests
-
-Run the test suite with `npm test`
+Please aim comments, criticism and suggestions to me here; [caskew@hotmail.com](mailto:caskew@hotmail.com)
