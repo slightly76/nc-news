@@ -50,3 +50,9 @@ You must have **Node.js v14** installed at least to run this app _locally_.
 ### :email: Contact
 
 Please aim comments, criticism and suggestions to me here; [caskew@hotmail.com](mailto:caskew@hotmail.com)
+
+---
+
+### Northcoders.
+
+This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by [Northcoders](https://northcoders.com/)
