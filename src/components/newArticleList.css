@@ -20,9 +20,9 @@ body {
 
 .articleHeader {
     /* z-index: 1001; */
-    display: flex; 
+    /* display: flex; 
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     color: #de9a89;
@@ -42,10 +42,9 @@ body {
     margin: 2px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 3px;
     min-height: 30px;
-    justify-content: center;
     box-shadow: 0 0 15px 15px rgba(47, 80, 86, 0.8);
     font-family: "Jersey 15", sans-serif; 
     width: 100%;

@@ -57,6 +57,7 @@ function NewArticleList({}) {
 	return (
 		<>
 			<div className='articleListContainer'>
+				{/* <div className='articleListCard'> */}
 				<div className='articleHeader'>
 					{newArticles.map((article) => {
 						const time = getDaysPassed(article.created_at);
@@ -79,6 +80,7 @@ function NewArticleList({}) {
 						);
 					})}
 				</div>
+				{/* </div> */}
 			</div>
 		</>
 	);
