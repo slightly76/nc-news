@@ -78,7 +78,7 @@ function ReadArticle() {
 		<div className='articleReadPage'>
 			<p className='articleReadTitle'>{article.title}</p>
 			<p className='articleReadAuthor'>
-				by {article.author}
+				by {article.author} in {article.topic}
 				{/* {authorDetails && (
 					<img
 						className='userAvatar'
@@ -86,7 +86,6 @@ function ReadArticle() {
 						alt='user avatar'
 					/>
 				)} */}
-				in {article.topic}
 			</p>
 			<p className='articleReadTimeStamp'>{time}</p>
 			<img className='articleImage' src={article.article_img_url}></img>
