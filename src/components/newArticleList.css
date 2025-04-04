@@ -1,9 +1,10 @@
-body {  
+html, body {  
     font-family: "Jersey 15", sans-serif;   
     background: #00323b; 
     margin: 0;
     padding: 0;
-    width: 100%
+    width: 100%;
+    height: 100%
 }
 
 .articleListContainer {
@@ -14,8 +15,59 @@ body {
     background: #2f5056;
     border-radius: 10px;
     margin-top: 115px;
-    width: 97%;
-    overflow: hidden;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: 0;
+}
+
+.articleSortControls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background: #2f5056;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Jersey 15", sans-serif;
+    width: 94%;
+}
+
+.articleSortControls label {
+    color: #de9a89;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.articleSortControls select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #2f5056;
+    border-radius: 5px;
+    background-color: #43727a;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.articleSortControls select:focus {
+    border-color: #de9a89;
+    background-color: #43727a;
+}
+
+.articleSortControls select option {
+    background-color: #de9a89;
+    color: #333;
+}
+
+/* Pin the 'Order' controls to the right */
+.articleSortControls label:last-child {
+    margin-left: auto;
+}
+
+.articleSortControls select:last-child {
+    margin-left: auto;
 }
 
 .articleHeader {
@@ -26,7 +78,7 @@ body {
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     color: #de9a89;
-    width: 100%;
+    width: 93%;
     padding: 5px 0;
     /* font-family: "Press Start 2p", cursive;
     font-size: 14px;
@@ -81,12 +133,13 @@ body {
 .articleListVotes {
     font-family: "Jersey 15", sans-serif;   
     font-size: 18px;
-    display: flex;
     color: #2f5056;
     text-shadow: 1px 1px 1px #de9a89;
     margin-left: 0px;
-    text-align: left;
-    margin-top: 0;
+    text-align: right;
+    margin-top: -30px;
+    padding-right: 10px;
+    align-self: right;
     
    
     

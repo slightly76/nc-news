@@ -22,14 +22,16 @@ function App() {
 	return (
 		<>
 			<PageTitleProvider>
-				<Header />
-				<div className='pageContainer'>
-					<Routes>
-						<Route path='/' element={<HomePage />} />
-						<Route path='/articles/:article_id' element={<ReadArticle />} />
-						<Route path='/topics/' element={<TopicList />} />
-						<Route path='/topics/:topic_slug' element={<NewArticleList />} />
-					</Routes>
+				<div className='app'>
+					<Header />
+					<div className='pageContainer'>
+						<Routes>
+							<Route path='/' element={<HomePage />} />
+							<Route path='/articles/:article_id' element={<ReadArticle />} />
+							<Route path='/topics/' element={<TopicList />} />
+							<Route path='/topics/:topic_slug' element={<NewArticleList />} />
+						</Routes>
+					</div>
 				</div>
 			</PageTitleProvider>
 			<Footer />
