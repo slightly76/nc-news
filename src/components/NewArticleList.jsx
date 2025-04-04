@@ -17,11 +17,15 @@ function NewArticleList({}) {
 
 	useEffect(() => {
 		setIsLoading(true);
+		console.log('topic_slug', topic_slug);
+		console.log('order', order);
+		console.log('sort', sortBy);
 
 		const url = topic_slug
 			? `https://slightly76-does-nc-news.onrender.com/api/articles?topic=${topic_slug}&sort_by=created_at&order=${order}`
 			: `https://slightly76-does-nc-news.onrender.com/api/articles?sort_by=created_at&order=${order}`;
 
+		console.log('API Request URL: ', url);
 		setPageTitle(topic_slug ? `Article Topic: ${topic_slug}` : 'New Articles');
 
 		axios

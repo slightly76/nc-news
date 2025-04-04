@@ -18,6 +18,10 @@ function HomePage() {
 		</>
 	);
 }
+
+function NotFound() {
+	return <h1>404 Page Not Found</h1>;
+}
 function App() {
 	return (
 		<>
@@ -30,6 +34,7 @@ function App() {
 							<Route path='/articles/:article_id' element={<ReadArticle />} />
 							<Route path='/topics/' element={<TopicList />} />
 							<Route path='/topics/:topic_slug' element={<NewArticleList />} />
+							<Route element='{<NotFound />}' />
 						</Routes>
 					</div>
 				</div>
