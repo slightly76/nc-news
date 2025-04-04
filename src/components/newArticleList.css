@@ -107,11 +107,11 @@ html, body {
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     font-weight: bold;
-    color: #de9a89;
+    color: #2f5056;
     background: #dadada;
     padding-top: 3px;
     margin-bottom: 3px;
-    text-shadow: 1px 1px 2px #2f5056;
+    text-shadow: 3px 3px 5px #de9a89;
 }
 
 
