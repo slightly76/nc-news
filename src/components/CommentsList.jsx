@@ -40,7 +40,7 @@ function CommentsList({ article_id }) {
 	return (
 		<div className='commentsSection'>
 			<CommentSubmission article_id={article_id} addComment={addComment} />
-			<h3 className='commentTitle'>Comments</h3>
+			<h3 className='commentTitle'>User Comments</h3>
 			{comments.length === 0 ? (
 				<p>Be the first to comment!</p>
 			) : (

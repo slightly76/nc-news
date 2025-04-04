@@ -23,9 +23,13 @@
   
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
-    color: #de9a89;
-    text-shadow: 1px 1px 2px #2f5056;
+    color: #2f5056;
+    text-shadow: 3px 3px 5px #de9a89;
     width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    
+    
 }
 
 .commentAuthor {

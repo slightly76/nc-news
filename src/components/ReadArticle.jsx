@@ -3,15 +3,17 @@ import { useParams } from 'react-router-dom';
 import { usePageTitle } from './PageTitleContext';
 import CommentsList from './CommentsList';
 import getDaysPassed from './getDaysPassed';
-import CommentSubmission from './CommentSubmission';
+// import CommentSubmission from './CommentSubmission';
 import axios from 'axios';
 import './readArticle.css';
 
-function readArticle() {
+function ReadArticle() {
 	const { article_id } = useParams();
 	const { setPageTitle } = usePageTitle();
 	const [article, setArticle] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
+	const [hasVoted, setHasVoted] = useState(null);
+	// const [authorDetails, setAuthorDetails] = useState(null);
 
 	useEffect(() => {
 		axios
@@ -22,6 +24,12 @@ function readArticle() {
 				setArticle(response.data.article);
 				setPageTitle('Read');
 				setIsLoading(false);
+				// 	return axios.get(
+				// 		`https://slightly76-does-nc-news.onrender.com/api/users/${article.author}`
+				// 	);
+				// })
+				// .then((userResponse) => {
+				// 	setAuthorDetails(userResponse.data.user);
 			})
 			.catch((error) => {
 				console.error('Error fetching article:', error);
@@ -29,24 +37,32 @@ function readArticle() {
 			});
 	}),
 		[article_id, setPageTitle];
-
+	// console.log(authorDetails);
 	const handleUpvote = () => {
+		if (hasVoted === 'up') return;
 		axios
 			.patch(
 				`https://slightly76-does-nc-news.onrender.com/api/articles/${article_id}`,
 				{ inc_votes: 1 }
 			)
+			.then(() => {
+				setHasVoted('up');
+			})
 			.catch((error) => {
 				console.error('Error updating article votes:', error);
 			});
 	};
 
 	const handleDownvote = () => {
+		if (hasVoted === 'down') return;
 		axios
 			.patch(
 				`https://slightly76-does-nc-news.onrender.com/api/articles/${article_id}`,
 				{ inc_votes: -1 }
 			)
+			.then(() => {
+				setHasVoted('down');
+			})
 			.catch((error) => {
 				console.error('Error updating article votes:', error);
 			});
@@ -62,21 +78,45 @@ function readArticle() {
 		<div className='articleReadPage'>
 			<p className='articleReadTitle'>{article.title}</p>
 			<p className='articleReadAuthor'>
-				by {article.author} in {article.topic}
+				by {article.author}
+				{/* {authorDetails && (
+					<img
+						className='userAvatar'
+						src={authorDetails.avatar_url}
+						alt='user avatar'
+					/>
+				)} */}
+				in {article.topic}
 			</p>
 			<p className='articleReadTimeStamp'>{time}</p>
-
+			<img className='articleImage' src={article.article_img_url}></img>
 			<p className='articleReadBody'>{article.body}</p>
 
 			<div className='voteContainer'>
 				<div className='articleVotes'>
 					{article.votes} Votes
 					<br></br>
-					<button className='voteButton' onClick={handleUpvote}>
-						↑vote
+					<button
+						className='voteButton'
+						onClick={handleUpvote}
+						disabled={hasVoted === 'up'}
+						style={{
+							opacity: hasVoted === 'up' ? 0.4 : 1,
+							cursor: hasVoted === 'up' ? 'not-allowed' : 'pointer',
+						}}
+					>
+						upvote
 					</button>
-					<button className='voteButton' onClick={handleDownvote}>
-						↓vote
+					<button
+						className='voteButton'
+						onClick={handleDownvote}
+						disabled={hasVoted === 'down'}
+						style={{
+							opacity: hasVoted === 'down' ? 0.4 : 1,
+							cursor: hasVoted === 'down' ? 'not-allowed' : 'pointer',
+						}}
+					>
+						downvote
 					</button>
 				</div>
 			</div>
@@ -86,4 +126,4 @@ function readArticle() {
 	);
 }
 
-export default readArticle;
+export default ReadArticle;

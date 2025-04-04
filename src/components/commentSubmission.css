@@ -15,6 +15,7 @@
     font-family: "Jersey 15", sans-serif;  
     border-top: solid #2f5056 2px;
     border-bottom: solid #2f5056 2px;
+    border-radius: 10px;
     background-color: #e7e7e7;
     color: #4e4e4e;
 }

@@ -22,6 +22,7 @@ function HomePage() {
 function NotFound() {
 	return <h1>404 Page Not Found</h1>;
 }
+
 function App() {
 	return (
 		<>

@@ -25,35 +25,51 @@ body {
     /* z-index: 1001; */
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
-    color: #de9a89;
+    color: #2f5056;
     border-top: solid #2f5056 2px;
     border-bottom: solid #2f5056 2px;
     border-radius: 10px;
     background: white;
     padding: 5px;
+    padding-top: 10px;
     width: 98%;
-    min-height: 50px;
-    text-shadow: 1px 1px 2px #2f5056;
-    box-shadow: 1px 1px 2px #2f5056;
+    min-height: 30px;
+    text-shadow: 3px 3px 5px #de9a89;
+    box-shadow: 3px 2px 4px #2f5056;
+    text-align: center;
+    
 }
 
 .articleReadAuthor {
     font-family: "Jersey 15", sans-serif; 
-    font-size: 16px;
+    font-size: 20px;
     color: #2f5056;
     margin: 0;
-    padding-left: 40px;
+    margin-top: -5px;
+    padding-right: 40px;
+    align-self: flex-end;
+    
 }
 
 .articleReadTimeStamp {
     font-family: "Jersey 15", sans-serif; 
-    font-size: 14px;
+    font-size: 18px;
     color: #2f5056;
     margin: 0;
-    padding-left: 40px;
+    margin-top: -5px;
+    padding-right: 40px;
+    align-self: flex-end;
 }
 
+.articleImage {
+    width: 80%;
+    align-self: center;
+    border-top: solid #2f5056 2px;
+    border-bottom: solid #2f5056 2px;
+    border-radius: 10px;
+    box-shadow: 8px 4px 8px #2f5056;
 
+}
 
 .articleReadBody {
     border-top: solid #2f5056 2px;
@@ -75,10 +91,11 @@ body {
     font-family: "Jersey 15", sans-serif; 
     display: flex;
     align-items: center;
-    align-self: flex-end;
     flex-direction: column;
     width: fit-content;
     margin-top: -20px;
+    padding-right: 40px;
+    align-self: flex-end;
     
 
     
@@ -97,10 +114,10 @@ body {
     width: fit-content;
     flex-grow: 1;
     background: #dadada;
-    font-size: 18px;
+    font-size: 24px;
     color: #2f5056;
     text-shadow: 1px 1px 1px #de9a89;
-    margin-left: 5px;
+    margin-right: -25px;
     text-align: right;
     margin-top: 0px;
     gap: 5px;
@@ -111,7 +128,7 @@ body {
 
 .voteButton {
     font-family: "Press Start 2p", cursive;
-    font-size: 14px;
+    font-size: 8px;
     background-color: #2f5056;
     color: #de9a89;
     border: none;
