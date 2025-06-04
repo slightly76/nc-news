@@ -5,10 +5,11 @@ function Footer() {
 	return (
 		<footer className='footer'>
 			<nav className='footer-nav'>
-				<Link to='/' className='footer-link'>
+				<p className='footer-heading'>Jump To</p>
+				<Link to='/' className='footerButton'>
 					Articles
 				</Link>
-				<Link to='/topics' className='footer-link'>
+				<Link to='/topics' className='footerButton'>
 					Topics
 				</Link>
 			</nav>

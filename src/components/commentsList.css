@@ -1,54 +1,60 @@
 .commentsSection {
-    font-family: "Jersey 15", sans-serif;  
-    background: #dadada;
-    border-radius: 10px;
-    border: 2px solid #2f5056;
+    font-family: "PT Sans"; 
+    background: #626F47;
+    /* border-radius: 10px; */
+    /* border: 2px solid #fff; */
     padding: 10px;
-    box-shadow: 1px 1px 2px #2f5056;
+    box-shadow: 1px 1px 2px #626F47;
+    align-self: center;
+    width: 100%
 }
 
 .commentCard {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
-    margin: 10px 0;
-    border-top: solid #2f5056 2px;
-    border-bottom: solid #2f5056 2px;
-    box-shadow: 1px 1px 2px #2f5056;
-    background: white;
+    margin: 10px auto;
+    border: solid #fff 2px;
+    box-shadow: 3px 3px 2px #555;
+    background: #7C8C3D;
     display: flex;
     flex-direction: column;
+    width: 90%;
+       
+   
 }
 
 .commentTitle {
   
-    font-family: "Press Start 2p", cursive;
-    font-size: 14px;
-    color: #2f5056;
-    text-shadow: 3px 3px 5px #de9a89;
+    font-family: "PT Sans";
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 3px 3px 5px #555;
     width: 100%;
     text-align: center;
-    padding-top: 15px;
+    margin-bottom : auto;
     
     
 }
 
 .commentAuthor {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -20px;
     font-weight: bold;
-    color: #2f5056;
+    color: #fff;
+    margin-top: 1px;
+    
 }
 .commentTimeStamp {
     font-size: 12px;
-    color: #2f5056;
+    color: #fff;
     padding-left: 5px;
-    
+    margin-top: auto;
     margin-left: -5px;
 }
 
 .commentBody {
     margin-top: -10px;
-    color: #444;
-    background: white;
+    color: #fff;
+    background: #7C8C3D;
 }
 

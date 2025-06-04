@@ -1,6 +1,6 @@
 html, body {  
     font-family: "Jersey 15", sans-serif;   
-    background: #00323b; 
+    background: #626F47; 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -12,7 +12,7 @@ html, body {
     flex-direction: column;
     padding: 5px;
     gap: 5px;
-    background: #2f5056;
+    background: #626F47;
     border-radius: 10px;
     margin-top: 115px;
     width: 100%;
@@ -25,7 +25,7 @@ html, body {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    background: #2f5056;
+    background: #626F47;
     border-radius: 10px;
     margin-bottom: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -34,7 +34,7 @@ html, body {
 }
 
 .articleSortControls label {
-    color: #de9a89;
+    color: #F5ECD5;
     font-size: 16px;
     font-weight: bold;
     margin-right: 20px;
@@ -43,21 +43,21 @@ html, body {
 .articleSortControls select {
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #2f5056;
+    border: 1px solid #626F47;
     border-radius: 5px;
-    background-color: #43727a;
+    background-color: #626F47;
     color: white;
     outline: none;
     cursor: pointer;
 }
 
 .articleSortControls select:focus {
-    border-color: #de9a89;
-    background-color: #43727a;
+    border-color: #A4B465;
+    background-color: #626F47;
 }
 
 .articleSortControls select option {
-    background-color: #de9a89;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -77,7 +77,7 @@ html, body {
     align-items: center; */
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
-    color: #de9a89;
+    color: #ffffff;
     width: 93%;
     padding: 5px 0;
     /* font-family: "Press Start 2p", cursive;
@@ -87,8 +87,8 @@ html, body {
 }
 
 .articleListCard {
-    background: #dadada;
-    border: 2px solid #2f5056;
+    background: #A4B465;
+    border: 2px solid #626F47;
     border-radius: 10px;
     padding: 0px 10px;
     margin: 2px 0;
@@ -97,7 +97,7 @@ html, body {
     justify-content: space-between;
     gap: 3px;
     min-height: 30px;
-    box-shadow: 0 0 15px 15px rgba(47, 80, 86, 0.8);
+    box-shadow: 0 0 15px 15px rgba(98, 111, 71, 0.8);
     font-family: "Jersey 15", sans-serif; 
     width: 100%;
    
@@ -107,11 +107,11 @@ html, body {
     font-family: "Press Start 2p", cursive;
     font-size: 14px;
     font-weight: bold;
-    color: #2f5056;
-    background: #dadada;
+    color: #FFFFFF;
+    background: #A4B465;
     padding-top: 3px;
     margin-bottom: 3px;
-    text-shadow: 3px 3px 5px #de9a89;
+    text-shadow: 3px 3px 5px #626F47;
 }
 
 
@@ -126,15 +126,15 @@ html, body {
 .articleTimeStamp {
     font-family: "Jersey 15", sans-serif;   
     font-size: 14px;
-    color: #777;
+    color: #555;
     margin: 0;
 }
 
 .articleListVotes {
     font-family: "Jersey 15", sans-serif;   
     font-size: 18px;
-    color: #2f5056;
-    text-shadow: 1px 1px 1px #de9a89;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #666666;
     margin-left: 0px;
     text-align: right;
     margin-top: -30px;

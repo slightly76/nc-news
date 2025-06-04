@@ -1,13 +1,18 @@
 .commentDeleteButton {
-    font-family: "Press Start 2p", cursive;
+    font-family: "PT Sans";
     align-self: flex-end;
     float: right;
-    font-size: 8px;
-    background-color: #2f5056;
-    color: #de9a89;
+    font-size: 14px;
+    background-color: #A4B465;
+    color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 1px 1px 2px #de9a89;
+    box-shadow: 1px 1px 2px #626F47;
 }   
+
+.commentDeleteButton:hover {
+    background-color: #fff;
+    color: #626F47;
+}

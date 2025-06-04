@@ -12,27 +12,28 @@
 }
 
 .commentBox {
-    font-family: "Jersey 15", sans-serif;  
-    border-top: solid #2f5056 2px;
-    border-bottom: solid #2f5056 2px;
+    font-family: "PT Sans";  
+    border-top: solid #626F47 2px;
+    border-bottom: solid #626F47 2px;
     border-radius: 10px;
     background-color: #e7e7e7;
     color: #4e4e4e;
+    padding: 5px;
 }
 
 .commentSubmitButton {
-    font-family: "Press Start 2p", cursive;
-    font-size: 14px;
-    background-color: #2f5056;
-    color: #de9a89;
+    font-family: "PT Sans";
+    font-size: 16px;
+    background-color: #A4B465;
+    color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-    box-shadow: 1px 1px 2px #de9a89;
+    box-shadow: 1px 1px 3px #333;
 }
 
 .commentSubmitButton:hover {
-    background-color: #de9a89;
-    color: #2f5056;
+    background-color: #fff;
+    color: #626F47;
 }

@@ -76,20 +76,31 @@ function ReadArticle() {
 
 	return (
 		<div className='articleReadPage'>
-			<p className='articleReadTitle'>{article.title}</p>
-			<p className='articleReadAuthor'>
-				by {article.author} in {article.topic}
-				{/* {authorDetails && (
+			<p className='articleReadTitle'>
+				{article.title}
+				<br />
+				<br />
+				<div className='articleMeta'>
+					<p className='articleReadAuthor'>
+						by user {article.author} in the topic {article.topic}
+						{/* {authorDetails && (
 					<img
 						className='userAvatar'
 						src={authorDetails.avatar_url}
 						alt='user avatar'
 					/>
 				)} */}
+					</p>
+					<p className='articleReadTimeStamp'>{time}</p>
+				</div>
 			</p>
-			<p className='articleReadTimeStamp'>{time}</p>
-			<img className='articleImage' src={article.article_img_url}></img>
-			<p className='articleReadBody'>{article.body}</p>
+
+			<p className='articleReadBody'>
+				<img className='articleImage' src={article.article_img_url} />
+
+				<br />
+				{article.body}
+			</p>
 
 			<div className='voteContainer'>
 				<div className='articleVotes'>

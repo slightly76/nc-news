@@ -31,7 +31,7 @@ function CommentDelete({ article_id, comment_id, removeComment }) {
 				onClick={handleDelete}
 				disabled={isDeleting}
 			>
-				{isDeleting ? 'Deleting...' : 'Delete Comment'}
+				{isDeleting ? 'Deleting...' : 'Delete Your Comment'}
 			</button>
 			{error && <p>{error}</p>}
 		</div>

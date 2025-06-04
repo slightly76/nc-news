@@ -4,31 +4,54 @@
 	left: 0;
 	width: 100%;
     z-index: 1001;
-	background: #00323b;
+	background: #626F47;
 	color: white;
+	border-top: 4px solid #fff;
 	text-align: center;
 	padding: 10px 0;
-	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 -8px 5px rgba(0, 0, 0, 0.2);
     
 }
 
 .footer-nav {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
+	font-family: "PT Sans";
+	font-size: 1.5rem;
+	gap: 5px;
 }
 
-.footer-link {
-	font-family: "Press Start 2p", cursive;
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
+.footer-heading {
+	font-size: 1.2rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	color: #fff;
 }
 
-.footer-link:hover {
-	text-decoration: underline;
+.footerButton {
+    font-family: "PT Sans";
+    font-size: 12px;
+    background-color: #A4B465;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #333;
+    width: 90px;
+    align-self: center;
 }
+
+.footerButton:hover {
+    background-color: #fff;
+    color: #626F47;
+}
+
 
 .footerSlug {
     font-size: 8px;
 }
+
