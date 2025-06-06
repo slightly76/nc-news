@@ -5,13 +5,15 @@ function Footer() {
 	return (
 		<footer className='footer'>
 			<nav className='footer-nav'>
-				<p className='footer-heading'>Jump To</p>
-				<Link to='/' className='footerButton'>
-					Articles
-				</Link>
-				<Link to='/topics' className='footerButton'>
-					Topics
-				</Link>
+				<p className='footer-heading'>Navigate</p>
+				<div className='bottom-row'>
+					<Link to='/' className='footerButton'>
+						Articles
+					</Link>
+					<Link to='/topics' className='footerButton'>
+						Topics
+					</Link>
+				</div>
 			</nav>
 			<p className='footerSlug'>Copyright 2025 Chris Askew</p>
 		</footer>

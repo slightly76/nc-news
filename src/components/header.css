@@ -1,23 +1,25 @@
 body {
   margin: 0;
   padding: 0;
+  
 }
 
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0;
   font-family: "PT Sans";
   color: white;
   background: #626F47;
   flex-wrap: nowrap;
   width: 100%;
-  height: 100px;
+  height: auto;
   border-bottom: 4px solid white;
   box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
   }
@@ -27,14 +29,14 @@ body {
   align-items: center;
   gap: 15px;
   width: 100%;
+  padding: 0px 10px;
   justify-content: center;
-  width: max-content;
   margin: 0 auto;
   background: #626F47;
 }
 
 .logo {
-  height: 5em;
+  height: 3.5em;
   margin-top: -1vh;
  
 }
@@ -44,8 +46,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  
-  
+    
 }
 
 .headline {
@@ -73,34 +74,34 @@ body {
 }
 
 .bottom-container {
-  /* border-top: solid white 2px; */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
-  margin-top: 0px;
+  padding: 2px 10px;
   background: #626F47;
-  padding: 0px 10px;
-  bottom: 5px;
+  padding-bottom: 2px;
+  margin-top: -15px;
   
   
 }
   
 .activePage {
-  font-family: "Press Start 2p", cursive;
-  font-size: 10px;
+  font-family: "PT Sans";
+  font-size: 14px;
   color: #fff;
   background: #626F47;
   white-space: nowrap;
   text-align: left;
+  margin-bottom: 0;
   
 }
 
 .user {
-  width: 30px;
-  height: 30px;
-  margin-right: 5%;
-  margin-top: -4px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-top: 0;
  }
   
   

@@ -11,27 +11,27 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100svh;
+ 
 }
+  
 
 a {
   font-weight: 500;
   color: #ffffff;
   text-decoration: inherit;
 }
-a:hover {
-  color: #A4B465;
-}
+
 
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* place-items: center; */
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100svh;
+  
 }
 
 h1 {
@@ -50,9 +50,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #de9a89;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

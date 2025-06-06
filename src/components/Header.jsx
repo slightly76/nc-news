@@ -19,6 +19,7 @@ function Header() {
 
 			<div className='bottom-container'>
 				<h2 className='activePage'>{pageTitle}</h2>
+
 				<img src={userAvatar} className='user' alt='user avatar' />
 			</div>
 		</header>

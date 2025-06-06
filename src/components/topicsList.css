@@ -1,15 +1,16 @@
 body {  
-    font-family: "Press Start 2p", cursive; 
-    background: #2f5056;
+    font-family: "PT Sans";
+    background: #626F47;
     margin: 0;
     padding: 0;
     width: 100%
 }
+
 .topicListContainer {
 	margin-top: 120px;
     padding: 20px;
     text-align: center;
-    
+  
     
 }
 
@@ -32,11 +33,12 @@ body {
 
 .topicListCard {
     font-family: "Press Start 2p", cursive; 
-	background: #f8f9fa;
-	padding: 15px 20px;
+	background: #7C8C3D;
+    padding: 15px 20px;
 	border-radius: 8px;
-	box-shadow: 4px 4px 4px #de9a89;
-	transition: transform 0.2s;
+    border: solid white 2px;
+	box-shadow: 4px 4px 4px #555;
+	transition: transform 0.3s ease-in-out;
     margin-bottom: 10px;
     min-width: 150px;
     text-align: center;
@@ -49,8 +51,9 @@ body {
 }
 
 .topicListCard:hover {
-	transform: translateY(-3px);
+    transform: scale(1.01);
 }
+
 
 .topicListCard a {
 	width: 100%; 
@@ -59,13 +62,19 @@ body {
 
 .topicListTitle {
 	text-decoration: none;
+    font-family: "PT Sans";
 	font-size: 18px;
-	color: #2f5056;
+	color: #ffffff;
 	font-weight: bold;
 	display: block;
 	padding: 5px;
 	text-align: center;
     width: 100%;
+}
+
+.topicListTitle:hover {
+    color: #F5ECD5;
+	
 }
 
 @media (max-width: 768px) {
@@ -80,59 +89,6 @@ body {
 		width: 100%;
 	}
 }
-
-/* 
-.topicListContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    gap: 5px;
-    background: #2f5056;
-    border-radius: 10px;
-    margin-top: 115px;
-    width: 97%;
-}
-
-.topicHeader {
-    
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Press Start 2p", cursive;
-    font-size: 14px;
-    color: #de9a89;
-    width: 100%;
-    padding: 5px 0;
-    
-}
-
-.topicListCard {
-    background: #dadada;
-    border: 2px solid #2f5056;
-    border-radius: 10px;
-    padding: 0px 10px;
-    margin: 2px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3px;
-    min-height: 30px;
-    justify-content: center;
-    box-shadow: 0 0 15px 15px rgba(47, 80, 86, 0.8);
-   
-}
-
-.topicListTitle {
-    font-family: "Press Start 2p", cursive;
-    font-size: 14px;
-    font-weight: bold;
-    color: #de9a89;
-    background: #dadada;
-    padding-top: 3px;
-    margin-bottom: 3px;
-    text-shadow: 1px 1px 2px #2f5056;
-} */
-
 
 
 

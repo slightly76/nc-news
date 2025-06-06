@@ -1,23 +1,24 @@
 html, body {  
-    font-family: "Jersey 15", sans-serif;   
+    font-family: "PT Sans";
     background: #626F47; 
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
+    align-items: center;
 }
 
 .articleListContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 5px;
     gap: 5px;
     background: #626F47;
     border-radius: 10px;
     margin-top: 115px;
     width: 100%;
-    margin-left: -10px;
-    margin-right: 0;
+    margin: 115px auto 0 auto;
 }
 
 .articleSortControls {
@@ -28,13 +29,14 @@ html, body {
     background: #626F47;
     border-radius: 10px;
     margin-bottom: 10px;
+    border: solid white 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: "Jersey 15", sans-serif;
+    font-family: "PT Sans"; 
     width: 94%;
 }
 
 .articleSortControls label {
-    color: #F5ECD5;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     margin-right: 20px;
@@ -71,68 +73,72 @@ html, body {
 }
 
 .articleHeader {
-    /* z-index: 1001; */
-    /* display: flex; 
-    justify-content: space-between;
-    align-items: center; */
-    font-family: "Press Start 2p", cursive;
+    font-family: "PT Sans";
     font-size: 14px;
     color: #ffffff;
     width: 93%;
     padding: 5px 0;
-    /* font-family: "Press Start 2p", cursive;
-    font-size: 14px;
-    color: #de9a89;
-    width: 100%; */
 }
 
 .articleListCard {
-    background: #A4B465;
-    border: 2px solid #626F47;
+    background: #7C8C3D;
+    border: 2px solid white;
     border-radius: 10px;
     padding: 0px 10px;
-    margin: 2px 0;
+    margin: 6px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 3px;
     min-height: 30px;
-    box-shadow: 0 0 15px 15px rgba(98, 111, 71, 0.8);
-    font-family: "Jersey 15", sans-serif; 
+    box-shadow: 3px 3px 2px #555;
+    font-family: "PT Sans";
     width: 100%;
+    transition: transform 0.3s ease-in-out;
    
 }
 
+.articleListCard:hover {
+	transform: scale(1.08);
+   }
+
 .articleListTitle {
-    font-family: "Press Start 2p", cursive;
-    font-size: 14px;
+    font-family: "PT Sans";
+    font-size: 18px;
     font-weight: bold;
     color: #FFFFFF;
-    background: #A4B465;
+    background: #7C8C3D;
     padding-top: 3px;
     margin-bottom: 3px;
-    text-shadow: 3px 3px 5px #626F47;
+    text-shadow: 3px 3px 5px #333;
+}
+
+.articleListTitle:hover {
+  
+    color: #F5ECD5;
+    background: #7C8C3D;
+    text-shadow: 3px 3px 2px #333;
 }
 
 
 
 .articleAuthor {
-    font-family: "Jersey 15", sans-serif;   
-    font-size: 16px;
-    color: #555;
+    font-family: "PT Sans";   
+    font-size: 14px;
+    color: white;
     margin: 0;
 }
 
 .articleTimeStamp {
-    font-family: "Jersey 15", sans-serif;   
-    font-size: 14px;
-    color: #555;
+    font-family: "PT Sans";   
+    font-size: 12px;
+    color: white;
     margin: 0;
 }
 
 .articleListVotes {
-    font-family: "Jersey 15", sans-serif;   
-    font-size: 18px;
+    font-family: "PT Sans";   
+    font-size: 14px;
     color: #FFFFFF;
     text-shadow: 1px 1px 1px #666666;
     margin-left: 0px;

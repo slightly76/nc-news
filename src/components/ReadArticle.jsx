@@ -22,14 +22,8 @@ function ReadArticle() {
 			)
 			.then((response) => {
 				setArticle(response.data.article);
-				setPageTitle('Read');
+				setPageTitle('Articles');
 				setIsLoading(false);
-				// 	return axios.get(
-				// 		`https://slightly76-does-nc-news.onrender.com/api/users/${article.author}`
-				// 	);
-				// })
-				// .then((userResponse) => {
-				// 	setAuthorDetails(userResponse.data.user);
 			})
 			.catch((error) => {
 				console.error('Error fetching article:', error);
@@ -37,7 +31,7 @@ function ReadArticle() {
 			});
 	}),
 		[article_id, setPageTitle];
-	// console.log(authorDetails);
+
 	const handleUpvote = () => {
 		if (hasVoted === 'up') return;
 		axios

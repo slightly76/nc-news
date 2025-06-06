@@ -3,7 +3,8 @@
     background: #626F47;
     /* border-radius: 10px; */
     /* border: 2px solid #fff; */
-    padding: 10px;
+    padding: 0 10px;
+
     box-shadow: 1px 1px 2px #626F47;
     align-self: center;
     width: 100%
@@ -26,12 +27,13 @@
 .commentTitle {
   
     font-family: "PT Sans";
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
     text-shadow: 3px 3px 5px #555;
     width: 100%;
     text-align: center;
     margin-bottom : auto;
+    margin-top: 0;
     
     
 }

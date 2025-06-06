@@ -39,8 +39,8 @@ function App() {
 						</Routes>
 					</div>
 				</div>
+				<Footer />
 			</PageTitleProvider>
-			<Footer />
 		</>
 	);
 }

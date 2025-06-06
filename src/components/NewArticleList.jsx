@@ -22,7 +22,7 @@ function NewArticleList({}) {
 			? `https://slightly76-does-nc-news.onrender.com/api/articles?topic=${topic_slug}&sort_by=created_at&order=${order}`
 			: `https://slightly76-does-nc-news.onrender.com/api/articles?sort_by=created_at&order=${order}`;
 
-		setPageTitle(topic_slug ? `Article Topic: ${topic_slug}` : 'New Articles');
+		setPageTitle(topic_slug ? `Article Topic: ${topic_slug}` : 'List Articles');
 
 		axios
 			.get(url)
@@ -95,7 +95,6 @@ function NewArticleList({}) {
 						);
 					})}
 				</div>
-				{/* </div> */}
 			</div>
 		</>
 	);
